@@ -1,273 +1,281 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos Gerais */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #ffffff; /* Texto em branco */
+    background-color: #0c1f3f; /* Fundo azul marinho */
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
 
-/* Header */
-header {
-    background: #003366;
-    color: white;
+/* Header com logo centralizada */
+.header {
+    background-color: #0c1f3f; /* Azul marinho */
     padding: 20px 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Centralização da logo */
-.logo img {
-    max-height: 120px;
-    width: auto;
-    margin-bottom: 10px; /* Espaçamento entre a logo e a navegação */
+.logo-container {
+    display: inline-block;
 }
 
-/* Navegação */
-nav {
-    display: flex;
-    justify-content: center;
+.logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 5px;
-}
-
-/* Animação da borda nos links */
-.nav-links a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: #f4b400;
-    transition: width 0.4s ease, left 0.4s ease;
-}
-
-.nav-links a:hover::before {
-    width: 100%;
-    left: 0;
-}
-
-
-
-/* Seção de Apresentação */
+/* Hero Section */
 .hero-section {
-    position: relative;
-    background-image: url('img/simbolos-do-direito-saiba-os-significados.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: url('hero-background.jpg') no-repeat center center/cover;
     height: 100vh;
+    position: relative;
+    color: white;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Sobreposição preta */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00336675; /* Azul claro com transparência */
-    z-index: -1; /* Coloca o filtro abaixo do conteúdo, mas acima da imagem de fundo */
 }
 
 .hero-content {
-    z-index: 2; /* Garante que o conteúdo fique acima do filtro */
+    text-align: center;
+    max-width: 600px;
 }
 
-
-
-.hero-section h2 {
-    font-size: 48px;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffcc33; /* Dourado */
 }
 
-.hero-section p {
-    font-size: 20px;
-    margin: 20px 0;
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.btn {
-    padding: 10px 20px;
-    background: #f4b400;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+.btn-cta {
+    background-color: #ffcc33; /* Botão dourado */
+    color: #0c1f3f; /* Texto azul marinho */
+    padding: 10px 30px;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background: #d69a00;
+.btn-cta:hover {
+    background-color: #f1b800; /* Dourado mais escuro */
 }
 
-/* Serviços */
-/* Seção de Serviços */
+/* About Section */
+.about-section {
+    background-color: #0c1f3f; /* Azul marinho */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc33; /* Dourado */
+}
+
+/* Services Section */
 .services-section {
-    padding: 50px 20px;
-    background-color: #fff;
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Fundo claro */
     text-align: center;
 }
 
-.services-section h2{
-    margin-bottom: 15px;
+.services-section h2 {
+    font-size: 2.5rem;
+    color: #000033; /* Azul escuro */
+    margin-bottom: 40px;
 }
 
-.services {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.service {
-    background: #003366;
-    color: white;
+.service-item {
+    margin-bottom: 30px;
     padding: 20px;
-    border-radius: 8px;
-    width: 30%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito hover */
-.service:hover {
-    transform: translateY(-10px); /* Eleva o card */
-    background-color: #f4b400; /* Altera a cor de fundo */
-    color: #003366; /* Troca a cor do texto */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #ffcc33; /* Título em dourado */
+    margin-bottom: 20px;
 }
 
-.service i {
-    font-size: 40px;
-    margin-bottom: 10px;
+.service-item ul {
+    list-style: none;
+    padding: 0;
 }
 
-.service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 16px;
-}
-
-/* Para garantir que o ícone e o texto também mudem de cor no hover */
-.service:hover i, .service:hover h3, .service:hover p {
-    color: #003366; /* Troca a cor dos ícones e textos dentro do card */
-}
-
-
-/* Seção de Contato */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 10px;
+.service-item ul li {
+    font-size: 1.1rem;
+    color: #000033; /* Texto em azul escuro */
     margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 1.2rem;
+    color: #000033;
+}
+
+/* Animação de hover para os conteúdos */
+.service-item:hover {
+    transform: translateY(-10px); /* Eleva o item suavemente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para criar profundidade */
+    background-color: #f0f8ff; /* Leve mudança na cor de fundo ao passar o cursor */
+}
+
+.service-item h3:hover {
+    color: #ffa500; /* Muda o dourado para um tom mais vibrante no hover */
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.service-item ul li:hover {
+    color: #0056b3; /* Muda o texto para um azul mais forte */
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+/* Botão CTA "Fale com especialista" */
+.cta-container {
+    margin-top: 30px;
+}
+
+.cta-button {
+    background-color: #ffcc33; /* Botão dourado */
+    color: #000033; /* Texto azul escuro */
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
 }
 
-.contact-section button {
-    padding: 10px 20px;
-    background: #003366;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.cta-button:hover {
+    background-color: #ffb200; /* Efeito hover */
 }
 
-.contact-section button:hover {
-    background: #f4b400;
+/* Responsividade */
+@media (max-width: 768px) {
+    .service-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-item ul li {
+        font-size: 1rem;
+    }
 }
 
-/* Rodapé */
-footer {
+/* Contact Section */
+.contact-section {
+    background-color: #0c1f3f; /* Azul marinho */
+    padding: 60px 0;
     text-align: center;
-    padding: 20px;
-    background-color: #003366;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc33; /* Dourado */
+}
+
+.contact-section ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact-section ul li {
+    margin-bottom: 10px;
+    color: #ffffff; /* Texto em branco */
+}
+
+/* Footer */
+footer {
+    background-color: #0c1f3f; /* Azul marinho */
     color: white;
+    padding: 20px;
+    text-align: center;
+    color: #ffcc33; /* Dourado */
 }
 
-/* Botão do WhatsApp */
-.whatsapp-button {
-    position: fixed;
-    bottom: 75px;
-    right: 30px;
-    z-index: 100;
-    background-color: #25d366;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Seção de imagem estática abaixo do header */
+.static-image-section {
+    background: url('img/Balanca_Justica.jpg') no-repeat center center/cover; /* Substitua 'sua-imagem.jpg' pelo nome do arquivo da imagem */
+    height: 70vh; /* Altura da seção */
+    position: relative;
+    background-attachment: fixed; /* Torna a imagem estática (parallax) */
+    background-size: cover;
+    background-position: center;
 }
 
-.whatsapp-button img {
-    width: 40px;
-    height: 30px;
+.static-image-overlay {
+    background-color: rgba(0, 0, 51, 0.514); /* Filtro azul escuro com transparência */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
 }
 
-/* Efeito hover no botão */
-.whatsapp-button:hover {
-    transform: scale(1.1); /* Aumenta o botão levemente ao passar o cursor */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+.static-image-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffcc33; /* Título em dourado */
 }
 
-
-/* Botão Voltar ao Topo */
-.back-to-top-button {
-    position: fixed;
-    bottom: 20px; /* Distância do botão do WhatsApp */
-    right: 20px;
-    background-color: #003366; /* Cor do fundo do botão */
-    color: white; /* Cor do texto */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
-    transition: background-color 0.3s ease; /* Efeito de transição */
+.static-image-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ffffff; /* Descrição em branco */
 }
 
-/* Efeito hover no botão Voltar ao Topo */
-.back-to-top-button:hover {
-    background-color: #005580; /* Cor mais escura ao passar o mouse */
+/* Estilos para o botão "Fale com especialista" */
+.cta-button {
+    background-color: #ffcc33; /* Botão dourado */
+    color: #000033; /* Texto azul escuro */
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+.cta-button:hover {
+    background-color: #ffb200; /* Leve mudança de cor no hover */
+}
 
-
+/* Responsividade */
+@media (max-width: 768px) {
+    .static-image-overlay h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
