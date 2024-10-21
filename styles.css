@@ -1,3 +1,4 @@
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +8,11 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #ffffff; /* Texto em branco */
     background-color: #0c1f3f; /* Fundo azul marinho */
+    color: #ffffff; /* Texto branco */
 }
 
+/* CONTAINER PADRÃO */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -18,7 +20,7 @@ body {
     padding: 40px 0;
 }
 
-/* Header com logo centralizada */
+/* HEADER COM LOGO CENTRALIZADA */
 .header {
     background-color: #0c1f3f; /* Azul marinho */
     padding: 20px 0;
@@ -33,7 +35,7 @@ body {
     width: 150px; /* Ajuste o tamanho da logo conforme necessário */
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero-section {
     background: url('hero-background.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -65,21 +67,44 @@ body {
     margin-bottom: 30px;
 }
 
-.btn-cta {
+/* BOTÃO CTA (CHAMADA PARA AÇÃO) */
+.btn-cta, .cta-button {
     background-color: #ffcc33; /* Botão dourado */
     color: #0c1f3f; /* Texto azul marinho */
     padding: 10px 30px;
+    font-size: 1rem;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
     transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    position: relative;
+    z-index: 1;
 }
 
-.btn-cta:hover {
-    background-color: #f1b800; /* Dourado mais escuro */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 204, 51, 0.5); /* Leve brilho dourado no hover */
+    z-index: -1;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-/* About Section */
+.cta-button:hover::before, .btn-cta:hover {
+    opacity: 1; /* Exibe o brilho no hover */
+    background-color: #ffb200; /* Dourado mais escuro */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+/* ABOUT SECTION */
 .about-section {
     background-color: #0c1f3f; /* Azul marinho */
     padding: 60px 0;
@@ -92,7 +117,7 @@ body {
     color: #ffcc33; /* Dourado */
 }
 
-/* Services Section */
+/* SEÇÃO DE SERVIÇOS */
 .services-section {
     padding: 50px 0;
     background-color: #f4f4f4; /* Fundo claro */
@@ -103,21 +128,34 @@ body {
     font-size: 2.5rem;
     color: #000033; /* Azul escuro */
     margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* GRID DOS SERVIÇOS */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards responsivos */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
 }
 
 .service-item {
-    margin-bottom: 30px;
-    padding: 20px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: all 0.4s ease;
+    text-align: left;
+    overflow: hidden;
 }
 
 .service-item h3 {
     font-size: 1.8rem;
-    color: #ffcc33; /* Título em dourado */
+    color: #ffcc33; /* Dourado */
     margin-bottom: 20px;
+    transition: color 0.4s ease;
 }
 
 .service-item ul {
@@ -127,55 +165,47 @@ body {
 
 .service-item ul li {
     font-size: 1.1rem;
-    color: #000033; /* Texto em azul escuro */
+    color: #000033; /* Azul escuro */
     margin: 10px 0;
+    transition: color 0.3s ease;
 }
 
-.service-item p {
-    font-size: 1.2rem;
-    color: #000033;
-}
-
-/* Animação de hover para os conteúdos */
 .service-item:hover {
-    transform: translateY(-10px); /* Eleva o item suavemente */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para criar profundidade */
-    background-color: #f0f8ff; /* Leve mudança na cor de fundo ao passar o cursor */
+    transform: translateY(-10px) scale(1.02); /* Elevação sutil */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
 }
 
-.service-item h3:hover {
-    color: #ffa500; /* Muda o dourado para um tom mais vibrante no hover */
-    transition: color 0.3s ease; /* Transição suave de cor */
+.service-item:hover h3 {
+    color: #ffa500; /* Dourado vibrante */
 }
 
-.service-item ul li:hover {
-    color: #0056b3; /* Muda o texto para um azul mais forte */
-    transition: color 0.3s ease; /* Transição suave de cor */
+.service-item:hover ul li {
+    color: #0056b3; /* Azul mais vibrante */
 }
 
-/* Botão CTA "Fale com especialista" */
-.cta-container {
-    margin-top: 30px;
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 204, 51, 0.1); /* Sobreposição dourada */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
 }
 
-.cta-button {
-    background-color: #ffcc33; /* Botão dourado */
-    color: #000033; /* Texto azul escuro */
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.service-item:hover::before {
+    opacity: 1; /* Exibe a sobreposição dourada no hover */
 }
 
-.cta-button:hover {
-    background-color: #ffb200; /* Efeito hover */
-}
-
-/* Responsividade */
+/* RESPONSIVIDADE DOS SERVIÇOS */
 @media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
+    }
+
     .service-item h3 {
         font-size: 1.6rem;
     }
@@ -185,7 +215,7 @@ body {
     }
 }
 
-/* Contact Section */
+/* SEÇÃO DE CONTATO */
 .contact-section {
     background-color: #0c1f3f; /* Azul marinho */
     padding: 60px 0;
@@ -205,10 +235,55 @@ body {
 
 .contact-section ul li {
     margin-bottom: 10px;
-    color: #ffffff; /* Texto em branco */
+    color: #ffffff; /* Texto branco */
 }
 
-/* Footer */
+/* BOTÃO DE WHATSAPP FIXO */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Verde WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.whatsapp-button img {
+    width: 35px; /* Ícone WhatsApp */
+    height: 35px;
+}
+
+.whatsapp-message {
+    display: none; /* Inicialmente escondido */
+    background-color: #ffffff;
+    color: #000033; /* Texto azul escuro */
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 70px; /* Aparece ao lado do botão */
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+/* Exibir mensagem ao passar o mouse */
+.whatsapp-button:hover .whatsapp-message {
+    display: block;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumenta o botão no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+}
+
+/* FOOTER */
 footer {
     background-color: #0c1f3f; /* Azul marinho */
     color: white;
@@ -217,18 +292,17 @@ footer {
     color: #ffcc33; /* Dourado */
 }
 
-/* Seção de imagem estática abaixo do header */
+/* SEÇÃO DE IMAGEM ESTÁTICA */
 .static-image-section {
-    background: url('img/Balanca_Justica.jpg') no-repeat center center/cover; /* Substitua 'sua-imagem.jpg' pelo nome do arquivo da imagem */
-    height: 70vh; /* Altura da seção */
-    position: relative;
-    background-attachment: fixed; /* Torna a imagem estática (parallax) */
+    background: url('img/Balanca_Justica.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    height: 70vh;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
 .static-image-overlay {
-    background-color: rgba(0, 0, 51, 0.514); /* Filtro azul escuro com transparência */
+    background-color: rgba(0, 0, 51, 0.514); /* Filtro azul escuro */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -242,39 +316,22 @@ footer {
 .static-image-overlay h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #ffcc33; /* Título em dourado */
+    color: #ffcc33; /* Dourado */
 }
 
 .static-image-overlay p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #ffffff; /* Descrição em branco */
+    color: #ffffff; /* Texto branco */
 }
 
-/* Estilos para o botão "Fale com especialista" */
-.cta-button {
-    background-color: #ffcc33; /* Botão dourado */
-    color: #000033; /* Texto azul escuro */
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #ffb200; /* Leve mudança de cor no hover */
-}
-
-/* Responsividade */
+/* RESPONSIVIDADE GERAL */
 @media (max-width: 768px) {
     .static-image-overlay h2 {
         font-size: 2rem;
     }
     
-    .cta-button {
+    .cta-button, .btn-cta {
         padding: 10px 25px;
         font-size: 0.9rem;
     }
