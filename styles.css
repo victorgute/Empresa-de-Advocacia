@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #0c1f3f;
+    color: #ffffff;
     line-height: 1.6;
-    background-color: #0c1f3f; /* Fundo azul marinho */
-    color: #ffffff; /* Texto branco */
 }
 
 /* CONTAINER PADRÃO */
@@ -22,287 +22,26 @@ body {
 
 /* HEADER COM LOGO CENTRALIZADA */
 .header {
-    background-color: #0c1f3f; /* Azul marinho */
+    background-color: #0c1f3f;
     padding: 20px 0;
     text-align: center;
 }
 
-.logo-container {
-    display: inline-block;
-}
-
 .logo {
-    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 150px;
 }
 
 /* HERO SECTION */
-.hero-section {
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-    color: white;
-}
-
-.hero-overlay {
-    background-color: rgba(0, 0, 0, 0.7); /* Sobreposição preta */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-content {
-    text-align: center;
-    max-width: 600px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #ffcc33; /* Dourado */
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* BOTÃO CTA (CHAMADA PARA AÇÃO) */
-.btn-cta, .cta-button {
-    background-color: #ffcc33; /* Botão dourado */
-    color: #0c1f3f; /* Texto azul marinho */
-    padding: 10px 30px;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    position: relative;
-    z-index: 1;
-}
-
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 204, 51, 0.5); /* Leve brilho dourado no hover */
-    z-index: -1;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.cta-button:hover::before, .btn-cta:hover {
-    opacity: 1; /* Exibe o brilho no hover */
-    background-color: #ffb200; /* Dourado mais escuro */
-    transform: scale(1.05); /* Aumenta o botão levemente */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-}
-
-/* ABOUT SECTION */
-.about-section {
-    background-color: #0c1f3f; /* Azul marinho */
-    padding: 60px 0;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffcc33; /* Dourado */
-}
-
-/* SEÇÃO DE SERVIÇOS */
-.services-section {
-    padding: 50px 0;
-    background-color: #f4f4f4; /* Fundo claro */
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 2.5rem;
-    color: #000033; /* Azul escuro */
-    margin-bottom: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* GRID DOS SERVIÇOS */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards responsivos */
-    gap: 20px;
-    justify-content: center;
-    align-items: start;
-}
-
-.service-item {
-    background-color: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    transition: all 0.4s ease;
-    text-align: left;
-    overflow: hidden;
-}
-
-.service-item h3 {
-    font-size: 1.8rem;
-    color: #ffcc33; /* Dourado */
-    margin-bottom: 20px;
-    transition: color 0.4s ease;
-}
-
-.service-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.service-item ul li {
-    font-size: 1.1rem;
-    color: #000033; /* Azul escuro */
-    margin: 10px 0;
-    transition: color 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-10px) scale(1.02); /* Elevação sutil */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-}
-
-.service-item:hover h3 {
-    color: #ffa500; /* Dourado vibrante */
-}
-
-.service-item:hover ul li {
-    color: #0056b3; /* Azul mais vibrante */
-}
-
-.service-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 204, 51, 0.1); /* Sobreposição dourada */
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-}
-
-.service-item:hover::before {
-    opacity: 1; /* Exibe a sobreposição dourada no hover */
-}
-
-/* RESPONSIVIDADE DOS SERVIÇOS */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* Coluna única em telas pequenas */
-    }
-
-    .service-item h3 {
-        font-size: 1.6rem;
-    }
-
-    .service-item ul li {
-        font-size: 1rem;
-    }
-}
-
-/* SEÇÃO DE CONTATO */
-.contact-section {
-    background-color: #0c1f3f; /* Azul marinho */
-    padding: 60px 0;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffcc33; /* Dourado */
-}
-
-.contact-section ul {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.contact-section ul li {
-    margin-bottom: 10px;
-    color: #ffffff; /* Texto branco */
-}
-
-/* BOTÃO DE WHATSAPP FIXO */
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366; /* Verde WhatsApp */
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-}
-
-.whatsapp-button img {
-    width: 35px; /* Ícone WhatsApp */
-    height: 35px;
-}
-
-.whatsapp-message {
-    display: none; /* Inicialmente escondido */
-    background-color: #ffffff;
-    color: #000033; /* Texto azul escuro */
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    right: 70px; /* Aparece ao lado do botão */
-    white-space: nowrap;
-    font-size: 1rem;
-}
-
-/* Exibir mensagem ao passar o mouse */
-.whatsapp-button:hover .whatsapp-message {
-    display: block;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1); /* Aumenta o botão no hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
-}
-
-/* FOOTER */
-footer {
-    background-color: #0c1f3f; /* Azul marinho */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    color: #ffcc33; /* Dourado */
-}
-
-/* SEÇÃO DE IMAGEM ESTÁTICA */
 .static-image-section {
-    background: url('img/Balanca_Justica.jpg') no-repeat center center/cover; /* Imagem de fundo */
+    background: url('img/Balanca_Justica.jpg') no-repeat center center/cover;
     height: 70vh;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
 }
 
+
+
 .static-image-overlay {
-    background-color: rgba(0, 0, 51, 0.514); /* Filtro azul escuro */
+    background-color: rgba(0, 0, 51, 0.514);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -312,27 +51,211 @@ footer {
     color: white;
     padding: 0 20px;
 }
-
 .static-image-overlay h2 {
     font-size: 2.5rem;
+    color: #ffcc33;
     margin-bottom: 10px;
-    color: #ffcc33; /* Dourado */
 }
 
 .static-image-overlay p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #ffffff; /* Texto branco */
+}
+
+.cta-container{
+    margin-top: 40px;
+}
+
+.cta-button {
+    margin-top: 20px;
+    background-color: #ffcc33;
+    color: #0c1f3f;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 204, 51, 0.5);
+    z-index: -1;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cta-button:hover::before {
+    opacity: 1;
+}
+
+.cta-button:hover {
+    background-color: #ffb200;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* SEÇÃO DE SERVIÇOS */
+.services-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    color: #000033;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* GRID DOS SERVIÇOS */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px));
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.service-item i{
+    display: flex;
+    justify-content: center;
+}
+
+.service-item h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #ffcc33;
+    margin-bottom: 20px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-item ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #000033;
+    margin: 10px 0;
+}
+
+.service-item:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* SEÇÃO DE CONTATO */
+.contact-section {
+    background-color: #0c1f3f;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #ffcc33;
+    margin-bottom: 20px;
+}
+
+.contact-section ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.contact-section ul li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0c1f3f;
+    padding: 20px;
+    text-align: center;
+    color: #ffcc33;
+}
+
+/* BOTÃO DE WHATSAPP FIXO */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-message {
+    display: none;
+    background-color: #ffffff;
+    color: #000033;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 70px;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+
+.whatsapp-button:hover .whatsapp-message {
+    display: block;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* RESPONSIVIDADE GERAL */
 @media (max-width: 768px) {
-    .static-image-overlay h2 {
-        font-size: 2rem;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
-    
-    .cta-button, .btn-cta {
+
+    .cta-button {
         padding: 10px 25px;
         font-size: 0.9rem;
+    }
+
+    .static-image-overlay h2 {
+        font-size: 2rem;
     }
 }
