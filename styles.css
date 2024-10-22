@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
 }
 
 /* HERO SECTION */
@@ -61,6 +61,39 @@ body {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+
+
+
+/* Estilo do botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 90px; /* Acima do botão do WhatsApp */
+    right: 20px; /* Alinhado ao lado direito */
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc33; /* Dourado */
+    color: #0c1f3f; /* Azul marinho */
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background-color: #ffb200; /* Dourado mais escuro no hover */
+    transform: scale(1.1);
+}
+
+/* Exibir o botão quando rolar a página */
+#backToTop.show {
+    display: block;
+}
+
 
 .cta-container{
     margin-top: 40px;
@@ -191,6 +224,162 @@ body {
     margin-bottom: 10px;
     color: #ffffff;
 }
+
+/* Seção Sobre o Especialista */
+.about-section {
+    padding: 60px 0;
+    background-color: #0c1f3f; /* Fundo azul escuro */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra na imagem */
+}
+
+.about-content {
+    flex: 1;
+    color: #ffffff; /* Texto branco para contraste com o fundo azul escuro */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #ffcc33; /* Título em dourado */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    text-align: justify; /* Justifica o texto */
+    color: #ffffff; /* Texto branco */
+}
+
+.about-content .cta-button {
+    background-color: #ffcc33;
+    color: #0c1f3f;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content .cta-button:hover {
+    background-color: #ffb200;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade da Seção "Sobre o Especialista" */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .about-content {
+        text-align: left; /* Mantém o texto alinhado à esquerda em telas menores */
+    }
+}
+
+
+
+/* Seção Agende uma consulta */
+.consultation-section {
+    padding: 60px 0;
+    background-color: #f4f4f4; /* Fundo claro */
+}
+
+.consultation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.consultation-info {
+    flex: 1;
+    color: #0c1f3f; /* Texto azul marinho */
+}
+
+.consultation-info h2 {
+    font-size: 2.5rem;
+    color: #ffcc33; /* Dourado */
+    margin-bottom: 20px;
+}
+
+.consultation-info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.consultation-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.consultation-info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.consultation-info .cta-button {
+    background-color: #ffcc33;
+    color: #0c1f3f;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-info .cta-button:hover {
+    background-color: #ffb200;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.consultation-map {
+    flex: 1;
+}
+
+/* Responsividade da Seção "Agende uma consulta" */
+@media (max-width: 768px) {
+    .consultation-container {
+        flex-direction: column;
+    }
+
+    .consultation-map {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
 
 /* FOOTER */
 footer {
