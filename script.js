@@ -1,12 +1,11 @@
-document.querySelectorAll('.btn-cta').forEach(button => {
-        button.addEventListener('click', () => {
-            window.open('https://wa.me/5511992593911', '_blank');
-        });
+// Botão "Fale com Especialista"
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('click', () => {
+        window.open('https://wa.me/5511992593911', '_blank');
     });
+});
 
-
-
-// Pega o botão pelo ID
+// Pega o botão "Voltar ao Topo" pelo ID
 const backToTopButton = document.getElementById('backToTop');
 
 // Função para mostrar ou esconder o botão dependendo da rolagem

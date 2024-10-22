@@ -38,8 +38,6 @@ body {
     background-attachment: fixed;
 }
 
-
-
 .static-image-overlay {
     background-color: rgba(0, 0, 51, 0.514);
     height: 100%;
@@ -62,18 +60,16 @@ body {
     margin-bottom: 30px;
 }
 
-
-
 /* Estilo do botão Voltar ao Topo */
 .back-to-top {
     position: fixed;
-    bottom: 90px; /* Acima do botão do WhatsApp */
-    right: 20px; /* Alinhado ao lado direito */
+    bottom: 90px;
+    right: 20px;
     display: none;
     width: 50px;
     height: 50px;
-    background-color: #ffcc33; /* Dourado */
-    color: #0c1f3f; /* Azul marinho */
+    background-color: #ffcc33;
+    color: #0c1f3f;
     text-align: center;
     line-height: 50px;
     font-size: 24px;
@@ -85,17 +81,15 @@ body {
 }
 
 .back-to-top:hover {
-    background-color: #ffb200; /* Dourado mais escuro no hover */
+    background-color: #ffb200;
     transform: scale(1.1);
 }
 
-/* Exibir o botão quando rolar a página */
 #backToTop.show {
     display: block;
 }
 
-
-.cta-container{
+.cta-container {
     margin-top: 40px;
 }
 
@@ -138,6 +132,7 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* SEÇÃO DE SERVIÇOS */
 /* SEÇÃO DE SERVIÇOS */
 .services-section {
     padding: 50px 0;
@@ -206,33 +201,10 @@ body {
     transform: translateY(-5px);
 }
 
-/* SEÇÃO DE CONTATO */
-.contact-section {
-    background-color: #0c1f3f;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    color: #ffcc33;
-    margin-bottom: 20px;
-}
-
-.contact-section ul {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.contact-section ul li {
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
 /* Seção Sobre o Especialista */
 .about-section {
     padding: 60px 0;
-    background-color: #0c1f3f; /* Fundo azul escuro */
+    background-color: #0c1f3f;
 }
 
 .about-container {
@@ -246,18 +218,18 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra na imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
     flex: 1;
-    color: #ffffff; /* Texto branco para contraste com o fundo azul escuro */
-    text-align: left; /* Alinha o texto à esquerda */
+    color: #ffffff;
+    text-align: left;
 }
 
 .about-content h2 {
     font-size: 2.5rem;
-    color: #ffcc33; /* Título em dourado */
+    color: #ffcc33;
     margin-bottom: 20px;
 }
 
@@ -265,8 +237,8 @@ body {
     font-size: 1.2rem;
     margin-bottom: 30px;
     line-height: 1.8;
-    text-align: justify; /* Justifica o texto */
-    color: #ffffff; /* Texto branco */
+    text-align: justify;
+    color: #ffffff;
 }
 
 .about-content .cta-button {
@@ -288,28 +260,10 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade da Seção "Sobre o Especialista" */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        max-width: 100%;
-    }
-
-    .about-content {
-        text-align: left; /* Mantém o texto alinhado à esquerda em telas menores */
-    }
-}
-
-
-
-/* Seção Agende uma consulta */
+/* Seção de Agendamento */
 .consultation-section {
     padding: 60px 0;
-    background-color: #f4f4f4; /* Fundo claro */
+    background-color: #f4f4f4;
 }
 
 .consultation-container {
@@ -321,12 +275,12 @@ body {
 
 .consultation-info {
     flex: 1;
-    color: #0c1f3f; /* Texto azul marinho */
+    color: #0c1f3f;
 }
 
 .consultation-info h2 {
     font-size: 2.5rem;
-    color: #ffcc33; /* Dourado */
+    color: #ffcc33;
     margin-bottom: 20px;
 }
 
@@ -340,19 +294,22 @@ body {
     padding: 0;
     margin-bottom: 30px;
 }
-.consultation-info ul a{
-    text-decoration: none;
-    color: #0c1f3f;
-}
-
-.consultation-info ul a :hover{
-    color: #acbddb;
-    
-}
 
 .consultation-info ul li {
     font-size: 1.1rem;
     margin-bottom: 10px;
+}
+
+.consultation-info ul a {
+    color: #0c1f3f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.consultation-info ul a:hover {
+    color: #ffcc33;
+    transform: translateX(5px);
 }
 
 .consultation-info .cta-button {
@@ -378,31 +335,21 @@ body {
     flex: 1;
 }
 
-/* Responsividade da Seção "Agende uma consulta" */
-@media (max-width: 768px) {
-    .consultation-container {
-        flex-direction: column;
-    }
-
-    .consultation-map {
-        margin-top: 30px;
-    }
-}
-
-
-
-
-
-
-/* FOOTER */
-footer {
+.fot {
     background-color: #0c1f3f;
     padding: 20px;
     text-align: center;
     color: #ffcc33;
+    position: relative; /* Altere para 'relative' para garantir que o conteúdo seja empurrado acima do footer */
+    width: 100%;
+    bottom: 0;
+    margin-top: 10px; /* Adicione um espaçamento acima do footer */
 }
 
-/* BOTÃO DE WHATSAPP FIXO */
+main {
+    flex-grow: 1; /* Isso empurra o footer para o final da página, mesmo que o conteúdo seja pequeno */
+}
+/* Botão de WhatsApp fixo */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -446,7 +393,7 @@ footer {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* RESPONSIVIDADE GERAL */
+/* Responsividade */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -459,5 +406,13 @@ footer {
 
     .static-image-overlay h2 {
         font-size: 2rem;
+    }
+
+    .about-container, .consultation-container {
+        flex-direction: column;
+    }
+
+    .consultation-map {
+        margin-top: 30px;
     }
 }
