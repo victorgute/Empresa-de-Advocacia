@@ -183,19 +183,23 @@ body {
     margin-bottom: 20px;
 }
 
+/* Estilo para os itens da lista */
+/* Alinhar as listas centralizadas */
 .service-item ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: disc; /* Define bolinhas como estilo */
+    padding-left: 0; /* Remove o padding padrão */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: table; /* Permite centralizar os itens */
 }
 
 .service-item ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
     font-size: 1.1rem;
-    color: #000033;
-    margin: 10px 0;
+    color: #000033; /* Texto em azul escuro */
+    line-height: 1.5; /* Aumenta a altura da linha para espaçar os itens */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda, enquanto o bloco é centralizado */
 }
+
 
 .service-item:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
@@ -335,6 +339,15 @@ body {
     list-style: none;
     padding: 0;
     margin-bottom: 30px;
+}
+.consultation-info ul a{
+    text-decoration: none;
+    color: #0c1f3f;
+}
+
+.consultation-info ul a :hover{
+    color: #acbddb;
+    
 }
 
 .consultation-info ul li {
