@@ -156,26 +156,39 @@ body {
     justify-content: center;
 }
 
+/* Adicionar logo como marca d'água nos cards */
 .service-item {
+    position: relative;
     background-color: white;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    position: relative; /* Para o posicionamento da logo no card */
     transition: all 0.4s ease;
     text-align: left;
+    overflow: hidden; /* Garante que a logo não saia dos limites do card */
 }
 
-.service-item::after {
+/* Marca d'água */
+.service-item::before {
     content: '';
-    background: url('img/logo2.png') no-repeat;
-    background-size: 60px; /* Ajuste o tamanho conforme necessário */
     position: absolute;
-    bottom: 10px; /* Posição no canto inferior direito */
-    right: 10px;
-    width: 60px; /* Ajuste o tamanho conforme necessário */
-    height: 60px;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Garante que a logo fique exatamente no centro */
+    background: url('img/logo2.png') no-repeat center center;
+    background-size: 70%; /* Ajusta o tamanho da logo */
+    opacity: 0.2; /* Torna a logo transparente para efeito de marca d'água */
+    width: 60%;
+    height: 100%;
+    z-index: 0; /* Coloca a marca d'água atrás do conteúdo */
 }
+
+/* Garante que o conteúdo do card fique sobre a marca d'água */
+.service-item * {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 
@@ -412,6 +425,12 @@ main {
     .services-grid {
         grid-template-columns: 1fr;
     }
+
+    .service-item::before{
+        width: 100%;
+        height: 100%;
+    }
+
 
     .cta-button {
         padding: 10px 25px;
