@@ -414,5 +414,16 @@ main {
 
     .consultation-map {
         margin-top: 30px;
+        width: 100%;  /* Faz o mapa ocupar 100% da largura em telas pequenas */
+        padding-left: 20px;
+    }
+
+    .consultation-info {
+        margin-bottom: 30px;  /* Adiciona espaçamento entre a informação e o mapa */
+    }
+
+    .consultation-map iframe {
+        width: 100%; /* Faz o iframe do mapa ocupar toda a largura */
+        height: 250px; /* Ajuste da altura para caber melhor em telas menores */
     }
 }
