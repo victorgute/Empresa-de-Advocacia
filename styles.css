@@ -412,10 +412,13 @@ main {
         flex-direction: column;
     }
 
+    .about-content h2{
+        font-size: 1.8rem;
+    }
+
     .consultation-map {
         margin-top: 30px;
         width: 100%;  /* Faz o mapa ocupar 100% da largura em telas pequenas */
-        padding-left: 20px;
     }
 
     .consultation-info {
