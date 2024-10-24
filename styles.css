@@ -150,7 +150,7 @@ body {
 
 .service-item {
     position: relative;
-    background-color: white;
+    background-color: #0c1f3f;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -159,19 +159,7 @@ body {
     overflow: hidden;
 }
 
-.service-item::before {
-    content: '';
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    background: url('img/logo2.png') no-repeat center center;
-    background-size: 70%; 
-    opacity: 0.2; 
-    width: 60%;
-    height: 100%;
-    z-index: 0; 
-}
+
 
 .service-item * {
     position: relative;
@@ -205,17 +193,36 @@ body {
 .service-item ul li {
     margin-bottom: 10px;
     font-size: 1.1rem;
-    color: #000033;
+    color: white;
     line-height: 1.5; 
     text-align: left; 
 }
 
+
+.service-item ul li::marker {
+    color: #ffcc33; 
+}
 
 .service-item:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
 
+
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background: url('img/logo2.png') no-repeat center center;
+    background-size: 70%; 
+    opacity: 0.4; 
+    width: 60%;
+    height: 100%;
+    z-index: 0; 
+}
 .about-section {
     padding: 60px 0;
     background-color: #0c1f3f;
