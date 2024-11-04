@@ -143,10 +143,11 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px));
+    grid-template-columns: repeat(2, 1fr); /* Ajustado para sempre exibir duas colunas */
     gap: 20px;
     justify-content: center;
 }
+
 
 .service-item {
     position: relative;
@@ -218,7 +219,7 @@ body {
     transform: translate(-50%, -50%);
     background: url('img/logo2.png') no-repeat center center;
     background-size: 70%; 
-    opacity: 0.4; 
+    opacity: 0.1; 
     width: 60%;
     height: 100%;
     z-index: 0; 
