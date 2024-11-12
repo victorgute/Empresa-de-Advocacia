@@ -10,10 +10,10 @@ body {
 /* Header */
 .header {
     background-color: #0c1f3f;
-    color: #ffcc33;
+    color: #d4af37;
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #ffcc33;
+    border-bottom: 3px solid #d4af37;
 }
 
 .header-container {
@@ -31,7 +31,7 @@ body {
 
 h1 {
     font-size: 1.8rem;
-    color: #ffcc33;
+    color: #d4af37;
     margin: 0;
 }
 

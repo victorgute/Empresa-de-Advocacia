@@ -24,6 +24,12 @@ body {
     text-align: center;
 }
 
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 200px;
+}
+
 
 .logo {
     width: 80px;
@@ -31,26 +37,26 @@ body {
 }
 
 
-.logo-container{
+.logo-container {
+    flex: 3;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
 }
 
 
 .nome{
-    color:#ffcc33;
+    color: #d4af37;
+    ;
 }
 
 .static-image-section {
-    background: url('img/palcio203.jpg') no-repeat center center/cover;
+    background: url('img/saalaoNobre.png') no-repeat center center/cover;
     height: 70vh;
     background-attachment: fixed;
 }
 
 .static-image-overlay {
-    background-color: rgba(0, 0, 51, 0.445);
+    background-color: rgba(0, 0, 51, 0.616);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -62,7 +68,7 @@ body {
 }
 .static-image-overlay h2 {
     font-size: 2.5rem;
-    color: #ffcc33;
+    color: #d4af37;
     margin-bottom: 10px;
 }
 
@@ -78,7 +84,7 @@ body {
     display: none;
     width: 50px;
     height: 50px;
-    background-color: #ffcc33;
+    background-color: #d4af37;
     color: #0c1f3f;
     text-align: center;
     line-height: 50px;
@@ -91,7 +97,7 @@ body {
 }
 
 .back-to-top:hover {
-    background-color: #ffb200;
+    background-color: #d4af37;
     transform: scale(1.1);
 }
 
@@ -105,7 +111,7 @@ body {
 
 .cta-button {
     margin-top: 20px;
-    background-color: #ffcc33;
+    background-color: #d4af37;
     color: #0c1f3f;
     padding: 12px 30px;
     font-size: 1rem;
@@ -137,7 +143,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #ffb200;
+    background-color: #d4af37;
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -194,7 +200,7 @@ body {
     display: flex;
     justify-content: center;
     font-size: 1.8rem;
-    color: #ffcc33;
+    color: #d4af37;
     margin-bottom: 20px;
 }
 
@@ -216,7 +222,7 @@ body {
 
 
 .service-item ul li::marker {
-    color: #ffcc33; 
+    color: #d4af37; 
 }
 
 .service-item:hover {
@@ -240,8 +246,6 @@ body {
     z-index: 0; 
 }
 
-
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -255,7 +259,7 @@ body {
 }
 
 .contact-info a {
-    color: #ffcc33;
+    color: #d4af37;
     font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
     transition: color 0.3s ease; /* Transição para o efeito hover */
 }
@@ -297,7 +301,7 @@ body {
 
 .about-content h2 {
     font-size: 2.5rem;
-    color: #ffcc33;
+    color: #d4af37;
     margin-bottom: 20px;
 }
 
@@ -310,7 +314,7 @@ body {
 }
 
 .about-content .cta-button {
-    background-color: #ffcc33;
+    background-color: #d4af37;
     color: #0c1f3f;
     padding: 12px 30px;
     font-size: 1rem;
@@ -323,7 +327,7 @@ body {
 }
 
 .about-content .cta-button:hover {
-    background-color: #ffb200;
+    background-color: #d4af37;
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -356,7 +360,7 @@ body {
 
 .consultation-info h2 {
     font-size: 2.5rem;
-    color: #ffcc33;
+    color: #d4af37;
     margin-bottom: 20px;
 }
 
@@ -384,12 +388,12 @@ body {
 }
 
 .consultation-info ul a:hover {
-    color: #ffcc33;
+    color: #d4af37;
     transform: translateX(5px);
 }
 
 .consultation-info .cta-button {
-    background-color: #ffcc33;
+    background-color: #d4af37;
     color: #0c1f3f;
     padding: 12px 30px;
     font-size: 1rem;
@@ -402,7 +406,7 @@ body {
 }
 
 .consultation-info .cta-button:hover {
-    background-color: #ffb200;
+    background-color: #d4af37;
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -415,7 +419,7 @@ body {
     background-color: #0c1f3f;
     padding: 20px;
     text-align: center;
-    color: #ffcc33;
+    color: #d4af37;
     position: relative; 
     width: 100%;
     bottom: 0;
@@ -432,12 +436,12 @@ body {
 
 .politica a{
     text-decoration: none;
-    color: #ffcc33;
+    color: #d4af37;
 }
 
 .politica :hover{
     text-decoration:underline;
-    color:#ffcc33 ;
+    color:#d4af37 ;
 }
 
 main {
@@ -523,8 +527,14 @@ main {
         margin-bottom: 30px;  
     }
 
+    .fot{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
     .consultation-map iframe {
         width: 100%; 
         height: 250px; 
-    }
+}
 }
